@@ -1,0 +1,477 @@
+// setup
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+// 
+
+///////////////////////////////////////////// custom styles start //////////////////////////////////////////
+
+// global styles
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #0A1612;
+    background: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Libre Franklin', sans-serif;
+    }
+
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, .mainH3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Covered By Your Grace', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+//  header styles
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(../../images/header-image.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+
+    @media (max-width: 450px) {
+        justify-content: center;
+    }
+   
+
+    & .majorSearch {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        p {
+            text-transform: uppercase;
+            font-family: 'Covered By Your Grace', cursive;
+            color: #0A1612;
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin: 0;
+            padding: 0;
+            padding-left: 10px;
+            border-bottom: 3px solid white;
+            background: #00a651;
+            color: white;
+            @media (max-width: 480px) {
+                width: 45%;
+                font-size: 25px;
+            }
+        }
+        input[type=text] {
+            font-family: 'Hind', sans-serif;
+            font-weight: lighter;
+            background: #00a651;
+            border: none;
+            border-bottom: 3px solid white;
+            width: 300px;
+            padding: 0 5px;
+            @media (max-width: 480px) {
+                width: 50%;
+            }
+        }
+    }
+
+    & .headerFood {
+        position: absolute;
+        padding: 15px;
+        @media (max-width: 750px) {
+            display: none;
+        }
+        &:nth-of-type(3) {
+            top: 0;
+            left: 0;
+        }
+        &:nth-of-type(4) {
+            bottom: 0;
+            right: 0;
+        }
+        &:nth-of-type(2) {
+            top: 0;
+            right: 0;
+            
+        }
+    }
+    & .headerFood2 {
+        position: absolute;
+        padding: 10px;  
+        @media (min-width: 750px) {
+            display: none;
+        }   
+    }
+
+    .food1 {
+        top: 0;
+        right: 0;
+    }
+
+    .food2 {
+        top: 0;
+    }
+
+    .food3 {
+        bottom: 0;
+    }
+
+    .food4 {
+        bottom: 0;
+        right: 0;
+    }
+
+    h1 {
+        font-size: 11vw;
+        @media (max-width: 950px) {
+            font-size: 150px;
+            line-height: 0.8;
+        }
+        @media (max-width: 450px) {
+            font-size: 110px;
+        }
+        color: white;
+        margin-bottom: 20%;
+        @media (max-width: 450px) {
+            margin-bottom: 5%;
+        }
+    }
+    
+    & .headerForm {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        @media (max-width: 480px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        & select:first-of-type {
+            margin-bottom: 5px;
+        }
+    }
+    
+}
+
+select {
+    text-align: center;
+    height: 39px ;
+    border: 1px solid white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #00a651;
+    border-radius: 0; 
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-family: 'Hind', sans-serif;
+    margin: 0 5px;
+    option {
+        margin: 20px;
+        border-radius: 0;
+    }  
+}
+
+.submitSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    & .scroll {
+        transition: all ease 0.4s;
+        z-index: 1;
+        margin-top: 20px;
+        &:hover {
+            background: #0a1612;
+            border: 1px solid white;
+            
+        }
+    }
+    input[type=submit] {
+        border: none;
+        text-transform: uppercase;
+        font-size: 30px;
+        letter-spacing: 1px;
+        background: transparent;
+        font-family: 'Covered By Your Grace', cursive;
+        border: 2px solid white;
+        font-weight: lighter;
+        padding: 10px 35px;
+        color: white;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        transition: all ease 0.5s;
+        background: #0a1612;
+        z-index: 2;
+        &:hover {
+            background: #def451;
+        }
+    }
+
+    p {
+        font-family: 'Covered By Your Grace', cursive;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin: 0;
+        padding: 5px 15px;
+        &:hover {
+            color: white;
+        }
+
+    }
+}
+
+// append and saved recipe header styling
+
+.mainH3 {
+    font-weight: lighter;
+    font-size: 80px;
+    line-height: 1;
+    color:  #0a1612;
+    margin-top: 40px;
+    @media (max-width: 880px) {
+        display: block;
+    }
+}
+
+.h3Images {
+    display: inline;
+    @media (max-width: 880px) {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.mainHeaderContainer {
+    text-align: center;
+    img, h3 {
+        display: inline;
+    }
+    img {
+        margin: 0 10px;
+        padding-top: 20px;
+    }
+}
+
+// saved recipe styling
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    input {
+        margin-right: 10px;
+        height: 20px;
+        width: 20px;
+        padding-top: 5px;
+    }
+}
+
+.savedThird {
+    display: flex; 
+    flex-direction: column;
+
+    & .removeRecipeName {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    & .savedThirdContent {
+        padding: 10px;
+        h4 {
+            text-align: center;
+            color: #0a1612;
+        }
+        li {
+            color: #0a1612;
+        }
+    }
+}
+
+.removeButton {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    border: none;
+    letter-spacing: 1px;
+    font-family: 'Hind', sans-serif;
+    margin: 0;
+    font-size: 12px;
+    transition: all ease 0.3s;
+    margin-bottom: 10px;
+    background: transparent;
+    p {
+        display: none;
+        color: white;
+        margin: 0;
+        font-weight: lighter;
+        transition: all ease 0.3s;
+        background: #0a1612;
+        padding: 10px;
+    }
+    &:hover {
+        color: white;
+        font-weight: lighter;
+        text-align: center;
+        img {
+            display: none;
+        }
+        p {
+            display: block;
+        }
+    }
+}
+
+.saveRecipeButton {
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    width: 40%;
+    background: #0a1612;
+    margin: 0 auto;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    transition: all ease 0.3s;
+    &:hover {
+      background: #def451;
+    }
+}
+
+.shareMeal {
+    display: flex;
+    align-items: center;
+    position: relative;
+    p {
+        margin-left: 10px;
+        color: #0A1612;
+        &:hover {
+            color: white;
+        }
+    }
+        & .SocialMediaShareButton {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+        }
+    }
+
+// append recipe styling
+
+.third {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #0a1612;
+    @media (max-width: 420px) {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom:10px;
+    }
+    background: #00a651;
+    color: white;
+    margin: 5px;
+    
+    & .appendImage {
+        width: 95%;
+        margin-top: 10px;
+        img {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+    }
+}
+
+.testing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imageHolder {
+    position: relative;
+    text-align: center;
+    & .h3Holder {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        margin-top: 25%;
+        h3 {
+            color: white;
+            background: rgba(10, 22, 18, 0.701);
+            font-size: 25px;
+            letter-spacing: 1px;
+            display: inline;
+            padding: 5px 20px;
+            margin: 0;
+            text-transform: uppercase;
+            font-family: 'Covered By Your Grace', cursive;
+            line-height: 2;
+        }
+    }
+
+}
+
+
+.linkArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        color: white;
+    }
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+// footer styling
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    background: #0a1612;
+    margin-top: 50px; 
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 12px;
+    a {
+        color: white;
+        transition: all ease 0.3s;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.boldTextClass {
+    display: none;
+}
+
+.popUpTextClass {
+    display: block;
+}
